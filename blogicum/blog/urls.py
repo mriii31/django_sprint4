@@ -28,7 +28,7 @@ posts = [
 # Profile
 profile = [
     path('edit/', views.edit_profile, name='edit_profile'),
-    path('<str:username>/', views.profile, name='profile'), #1.5 Тип параметра в маршрутах для ника пользователя не slug
+    path('<str:username>/', views.profile, name='profile'),
 ]
 
 urlpatterns = [

@@ -3,10 +3,10 @@ from django import forms
 from .models import Post, User, Comment
 
 
-class PostForm(forms.ModelForm): #1.3 Поля is_published и pub_date в форме для постов
+class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        exclude = ('author',) #2.2 PostForm через exclude
+        exclude = ('author',)
         widgets = {
             'pub_date': forms.DateTimeInput(
                 format='%Y-%m-%d %H:%M', attrs={'type': 'datetime-local'}
